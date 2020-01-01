@@ -1,0 +1,28 @@
+{
+  "name": "anarchy.tech",
+  "version": "1.0.0",
+  "description": "Sources for the anarchy.tech website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ILikePizza555/anarchy.tech.git"
+  },
+  "keywords": [
+    "html5",
+    "static",
+    "site",
+    "website"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ILikePizza555/anarchy.tech/issues"
+  },
+  "homepage": "https://github.com/ILikePizza555/anarchy.tech#readme",
+  "dependencies": {
+    "metalsmith": "^2.3.0"
+  }
+}
