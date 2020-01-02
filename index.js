@@ -3,6 +3,7 @@ const collections = require("metalsmith-collections");
 const markdown = require("metalsmith-markdown");
 const layouts = require("metalsmith-layouts");
 const sass = require("metalsmith-sass");
+const pug = require("pug");
 
 Metalsmith(__dirname)
     .metadata({
@@ -23,3 +24,4 @@ Metalsmith(__dirname)
         default: "base.pug",
         directory: "layouts"
     }))
+    .use(pug())
