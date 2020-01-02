@@ -21,10 +21,10 @@ const app = Metalsmith(__dirname)
     }))
     .use(markdown())
     .use(layouts({
+        pattern: ["**/*.html", "**/*.md"],
         default: "base.pug",
         directory: "layouts"
-    }))
-    .use(pug({useMetadata: true}));
+    }));
 
 if (module.parent) {
     module.exports = app;
