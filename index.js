@@ -24,4 +24,4 @@ Metalsmith(__dirname)
         default: "base.pug",
         directory: "layouts"
     }))
-    .use(pug())
+    .use(pug({useMetadata: true}))
