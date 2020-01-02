@@ -29,5 +29,17 @@ const app = Metalsmith(__dirname)
 if (module.parent) {
     module.exports = app;
 } else {
-    app.build(err => { if (err) { console.error(err.message); process.exit(1) } });
+    const buildStartTime = Date.now();
+
+    app.build((err, files) => { 
+        if (err) { 
+            throw err; 
+        } 
+        
+        const buildTime = Date.now() - buildStartTime;
+        const fileCount = Object.keys(files).length;
+
+        console.log(`Build completed with ${fileCount} files in ${buildTime} ms.`);
+        Object.keys(files).forEach(f => console.log(`Outputted: ${f}`));
+    });
 }
