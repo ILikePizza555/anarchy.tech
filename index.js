@@ -5,7 +5,7 @@ const layouts = require("metalsmith-layouts");
 const sass = require("metalsmith-sass");
 const pug = require("pug");
 
-Metalsmith(__dirname)
+const app = Metalsmith(__dirname)
     .metadata({
         sitename: "anarchy.tech",
         siteurl: "http://anarchy.tech/"
@@ -24,4 +24,10 @@ Metalsmith(__dirname)
         default: "base.pug",
         directory: "layouts"
     }))
-    .use(pug({useMetadata: true}))
+    .use(pug({useMetadata: true}));
+
+if (module.parent) {
+    module.exports = app;
+} else {
+    app.build(err => { if (err) { console.error(err.message); process.exit(1) } });
+}

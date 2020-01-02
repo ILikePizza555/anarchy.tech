@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Sources for the anarchy.tech website",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ILikePizza555/anarchy.tech.git"
@@ -30,5 +27,11 @@
     "metalsmith-markdown": "^1.3.0",
     "metalsmith-pug": "^2.0.0",
     "metalsmith-sass": "^1.7.0"
+  },
+  "devDependencies": {
+    "metalsmith-dev-server": "github:rstacruz/metalsmith-dev-server"
+  },
+  "scripts": {
+    "dev": "metalsmith-dev-server index.js --watch web"
   }
 }
