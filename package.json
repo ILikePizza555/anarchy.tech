@@ -32,6 +32,6 @@
     "metalsmith-dev-server": "github:rstacruz/metalsmith-dev-server"
   },
   "scripts": {
-    "dev": "metalsmith-dev-server metalsmith.js --watch web --port 8000"
+    "dev": "metalsmith-dev-server metalsmith.js --watch . --port 8000"
   }
 }
