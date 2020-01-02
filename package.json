@@ -2,7 +2,7 @@
   "name": "anarchy.tech",
   "version": "1.0.0",
   "description": "Sources for the anarchy.tech website",
-  "main": "index.js",
+  "main": "metalsmith.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ILikePizza555/anarchy.tech.git"
